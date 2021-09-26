@@ -10,8 +10,3 @@ toc.addEventListener("click", function () {
     list.classList.add("hide");
   }
 });
-
-const button = document.querySelector("button");
-button.addEventListener("click", function () {
-  console.log("button clicked");
-});
