@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>git-blog</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    
+
+    <section class="section center-container blog-section git-blog" >
+        <div class="center-container">
+            <h2 class="section-header" id="toc">Table of Contents
+            </h2>
+            <ul id="blog-toc-list">
+                <li class="blog-list-item"><a href="#1">GIT</a></li>
+                <li class="blog-list-item"><a href="#2">What is purpose of Git?</a></li>
+                <li class="blog-list-item"><a href="#3">Who uses Git?</a></li>
+                <li class="blog-list-item"><a href="#4">Git vs GitHub</a></li>
+                <li class="blog-list-item"><a href="#5">GitHub</a></li>
+                <li class="blog-list-item"><a href="#6">Git commands</a></li>
+                <li class="blog-list-item"><a href="#7">Some good practices for meaningful commit messages</a></li>
+              </ul>
+        </div>
+    </section>
+    <section class="section ow center-container blog-section git-blog">
+        
+
+      <div class="center-container">
+        <h2 id="1" class="section-header">GIT</h2>
+        <p><dfn>GIT</dfn> is a global information tracker.I highly recommend you to google it to get to know about various other funny and strange abbreviations git has! Now, coming to the pronunciation  g in git is pronounced as "ghee"... except single e in that meaning pronounced as "ghe" and "it" is pronounced as just regular "it" nothing special about that</p>
+        
+
+        <h2 id="2"  class="section-header">What is purpose of Git?</h2>
+        <p><dfn>GIT</dfn> is a tool that keeps track of various versions of your project and hence known as VCS (Version Control System). Also, it is open-source and free to use!!<br/><strong> Speaking of open-source and free to use: </strong>"It is developed by this great man <strong>Linus Torvalds</strong>" And yes he's the same person who gave us the "LINUX" which is also open-source and free to use Operating System.</p></p>
+        
+
+        <h2 id="3"  class="section-header">Who uses Git?</h2>
+        
+        
+          <ul>
+            <li class="blog-list-item"><strong>Scientists:</strong> To collect various information and to study it</li>
+            <li class="blog-list-item"><strong>Writers:</strong> To keep track of different versions or parts in their stories</li>
+            <li class="blog-list-item"><strong>Government:</strong> Ammending laws, sharing other data etc</li>
+            <li class="blog-list-item"><strong>Engineers and Coders:</strong> They use it for keeping different versions or features in their projects (Well you might've thought only these category people use it :-) right? Not just the mentioned categories other people also use it for various purposes)</li>
+          </ul>
+        
+
+        <h2 id="4" >Git vs GitHub</h2>
+        <p>Now this a common confusion in most of the people.They assume that both Git and GitHub are the same.</p>
+        
+        <h3>Example</h3>
+        <p>Let's look at a simple scenario and try to understand the difference...
+        Assume you are using Git to track various versions or features of your project. Now git runs in your local machine and <strong>only you</strong> can see all the history of changes you've made to your code and could keep track of it. Now if you want to share all those versions or changes to your friend or colleague who's located somewhere else what you would do? Ofcourse we can book a flight ticket and go to him/her with our laptop right ? What if I say there's a tool which saves your flight ticket!? Yes there is one and it is called <strong>"GITHUB".</strong>
+        </p>
+        <p>
+          <h2 id="5" >GitHub</h2>
+          <p><dfn>GitHub</dfn> is a service which stores your local git repo (repo or repository is git workspace) on the cloud. And hence it requires internet to push your local folders into Github. It also helps in collaborating with other people. Now, inorder to collaborate other people should be able to identify that it's you right? Hence Github needs an account.
+        Whereas git doesn't require internet or account. Just download it in your local machine and start working with it. And the limitation ?? It's already discussed: You won't be able to share your changes or collaborate with others if you're only using git and not github.
+        </p>
+
+<p>        
+<strong> Now that we know what git is, let's see how we can use it in our projects to keep track of various versions.</strong>
+</p>
+<p>
+Mostly git is used through <strong>command line interface (CLI)</strong> and it was first made and used it like that but as days passed by several GUI's (Graphical user interface) like GitHub Desktop, GitKraken etc were developed to interact and make it more user friendly. But still using git with CLI (Command line interface => terminal) has a <strong>
+separate fan base! </strong> And it's also good to start using git with CLI first as it gives good exposure in using CLI which is "THE MOST IMPORTANT SKILL."
+</p>
+
+<p> You can check if git is installed on your machine using <div style="background-color:#b4bccc
+  ;padding: 0.5rem; color:white"> git --version </div></p>
+<p>
+That doesn't simply mean that you are using git. To use it and track various changes and history of all the actions that are done in that project we need to initialize a git repository in that project. We can have different repos and all these will not be connected.
+ </p>
+
+<h2 id="6" >Git commands</h2>
+
+<p>
+Let's see some of the git commands... inorder to start using git in your project go to the root directory of your project and execute 
+</p>
+
+<div id="blog-command-container">
+  <div id="blog-command-content">
+    <p>git init</p>
+  </div>
+</div>
+
+<p>
+This is the way to initialize a git repository which if done, git starts tracking your project. But it is <span style="font-size: 1.2rem;color:red"><strong> WRONG! </strong></span> to execute this command first. It's always a good idea to first check if we had previously executed that command and check if a git repository is already initialized.
+</p>
+
+<p>
+To check that, first check the status of git in your project using:
+</p>
+<div id="blog-command-container">
+  <div id="blog-command-content">
+    <p>git status</p>
+  </div>
+</div>
+<p>
+You should get something like this:
+<div id="blog-command-output-container">
+  <div id="blog-command-output-content">
+    <p>"fatal: not a git repository (or any of the parent directories): .git"</p>
+  </div>
+</div>
+
+<p>
+That means git is not initialized in your project before and now you can go ahead and initialize it.
+</p>
+
+<div id="blog-command-container">
+  <div id="blog-command-content">
+    <p>git init 
+      </p>
+  </div>
+</div>
+
+ <p>This initializes empty git repository in your project which creates the .git "hidden folder" which has various 
+  subfolders which keeps track of all the history in our project.</p>
+
+<p>
+<strong>
+But if you had initialized git more than once, do not panic its not the end of the world but git gets confused and git tracks about git 
+so if we created nested repos fear not, and delete inner .git folder using:</strong> </p> 
+
+
+<div id="blog-command-container">
+  <div id="blog-command-content">
+    <p>rm -rf .git </p>
+  </div>
+</div>
+
+<p> Once you've initialized a git  repository it starts tracking files and this tracking mechanism consists of two steps: Project files first must be added to the staging area and then commit.All the files that are in staging area will get committed.</p>
+
+<p>
+<strong> Generally the flow is like this:</strong>
+<br/>
+working directory->git add->staging area->git commit->repository
+<br/>
+You can add all the untracked files into the staging area at once using:
+</p>
+
+<div id="blog-command-container">
+  <div id="blog-command-content">
+    <p>git add . </p>
+  </div>
+</div>
+
+<p>To add specific files into the staging area.</p>
+
+<div id="blog-command-container">
+  <div id="blog-command-content">
+    <p>git add filename1,filename2,... </p>
+  </div>
+</div>
+
+<p>
+To commit those changes we simply do:
+</p>
+
+<div id="blog-command-container">
+  <div id="blog-command-content">
+    <p>git commit </p>
+  </div>
+</div>
+
+<p> Adds all the files in the staging area into git repo. but the above command pops a default editor which will be vim editor and asks for a message... instead we can directly give it as</p>
+
+<div id="blog-command-container">
+  <div id="blog-command-content">
+    <p>git commit -m "first commit" </p>
+  </div>
+</div>
+<p> -m is the message flag and the message should be given inside double quotes <br/>
+Now run <span style="background-color:#b4bccc
+;padding: 0.5rem; color:white; margin:0 0.3rem 0rem 0.1rem"> git status </span>
+which gives the list of files that are committed.
+ </p>
+
+
+ 
+
+<h2 id="7" class="section-header">Some good practices for meaningful commit messages:</h2>
+        
+        
+          <table>
+            <tbody>
+            <tr class="blog-list-item"><strong> <td> feat:</td></strong> <td> to specify any info about any feature</td></tr>
+            <tr class="blog-list-item"><strong> <td> fix:</td></strong> <td> bug fix</td></tr>
+            <tr class="blog-list-item"><strong> <td> docs:</td></strong> <td> for changes in documentation</td></tr>
+            <tr class="blog-list-item"><strong> <td> styling:</td></strong> <td> everything related to styling</td></tr>
+            <tr class="blog-list-item"><strong> <td> refactor:</td></strong> <td> optimizing the repetitive code</td></tr>
+            <tr class="blog-list-item"><strong> <td> chore:</td></strong> <td> updating build tasks,package manager</td></tr>
+            <tr class="blog-list-item"><strong> <td> testing:</td></strong> <td> everything related to testing</td></tr>
+            </tbody>
+          </table>
+        
+
+          <p>Also it is a good practice to write command messages in present tense</p><h3>Example</h3>
+            <p> Let's say you added a new feature in your project and now you want to commit it.
+            Your commit message should be something like:
+            <br/>
+          feat: add new feature</p>
+
+          <p>
+            <span style="background-color:#b4bccc
+            ;padding: 0.5rem; color:white; margin:0 0.3rem 0rem 0.1rem"> git log </span> command
+           will list the log of all the files that are committed. It has commit hash, date and time at which commits are created author name and etc.
+           </p>
+           
+           <p><strong>Also there are a lot other commands. But for a beginner it's good to atleast know these commands. I highly encourage you to google more and more about other git features and commands. What I just discussed is just a drop in the "git" ocean and I hope this really helped you understand basics of git and motivated you enough to explore more about it!</strong></p>
+      </div>
+    </section>
+
+    <section class="section ow center-container blog-section git-blog">
+      <h3> About the author</h3>
+      <div style="float: left;margin-right: 1rem;">
+      <img class="blog-author-dp" src="/images/raghu_fav_photo.jpg" alt="author_dp" >
+      </div>
+      <p style="margin: 0 2rem;"> 
+      Hi, I am <strong>Gopu M N G Raghunadh</strong>  graduated in 2021 and currently working at Oracle as an Application developer. My passion is to make excellent web and mobile applications that helps businesses grow.
+    </p>
+    </section>
+
+
+    <footer class="social center-container">
+      <div class="social-header">
+        You can also connect to me at the following links
+      </div>
+      <ul class="social-media">
+        <li class="list-item-inline">
+          <a
+            href="https://www.linkedin.com/in/m-n-g-raghunadh-gopu-2518241b4/"
+            class="link"
+            >Linkedin</a
+          >
+        </li>
+        <li class="list-item-inline">
+          <a href="https://www.instagram.com/raghunadh_g/" class="link"
+            >Instagram</a
+          >
+        </li>
+        <li class="list-item-inline">
+          <a href="https://twitter.com/Raghuna72909860" class="link">Twitter</a>
+        </li>
+      </ul>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
