@@ -171,3 +171,14 @@ hr {
 #toc:hover {
   cursor: pointer;
 }
+
+pre {
+  font-size: large;
+  line-height: 1.5rem;
+  background-color: var(--dark-gray);
+  padding: 1rem;
+}
+
+li {
+  margin: 1rem 0rem;
+}
